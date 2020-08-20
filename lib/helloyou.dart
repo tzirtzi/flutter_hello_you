@@ -46,16 +46,19 @@ class _HelloYouState extends State<HelloYou> {
               onSubmitted: (String newName) {
                 setTitleName(newName);
               },
+              decoration: InputDecoration(
+                hintText: "Lionel Is Messy"
+              )
             ),
             Container(
                 padding: EdgeInsets.only(top: 20.0),
                 child: Column(children: <Widget>[
                   Text(
-                    "Hello",
+                    (name != "") ? "Hello" : "",
                     style: Theme.of(context).textTheme.headline4,
                   ),
                   Text(
-                    ((name != "") ? 'my dear ' + name + '!' : ""),
+                    ((name != "") ? 'my dear ' + name + ' !!!' : ""),
                     style: Theme.of(context).textTheme.headline6,
                   ),
                 ]))
